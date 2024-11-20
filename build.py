@@ -10,8 +10,9 @@ def update_time():
     # Get the current time and place it in the html file
     current_time = datetime.now(ZoneInfo("America/New_York"))
     filedata = filedata.replace("CURRENT_TIME_HERE", str(current_time))
+    #replaces string with updated string
 
-    # Make the "out" folder
+    # Make the "out" folder. in order not to overwrite original file
     os.makedirs("./out", exist_ok=True)
 
     # Write the file to the "out" folder
